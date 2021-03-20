@@ -51,6 +51,7 @@ a {
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
   top: 0;
@@ -58,6 +59,16 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.group-logo {
+  display: flex;
+  align-items: center;
+}
+
+.group-navitems {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 .navbar-item {
   list-style-type: none;
   font: 1.5rem "Roboto";
@@ -74,19 +85,24 @@ a {
 }
 
 li.navbar-item.nav-logo {
-  min-width: 5rem;
-  max-width: 5rem;
+  width: 5rem;
 }
+li.navbar-item.nav-logo a {
+  display: block;
+  font-size: 0;
+}
+
 .cls-1:hover {
   fill: #ff9fa7;
 }
+
 li.navbar-item.nav-name {
   font: 600 2.5rem "montserrat";
   margin-left: 1rem;
 }
 
 li.navbar-item.nav-about {
-  margin-left: auto;
+  margin-left: 4rem;
 }
 
 li.navbar-item.nav-projects {
@@ -114,6 +130,7 @@ li.navbar-item.nav-contact {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .btn-go-top i {
   color: #333;
@@ -133,6 +150,8 @@ li.navbar-item.nav-contact {
 .about-container h1 {
   font-family: "Exo 2", sans-serif;
   font-size: 4rem;
+  font-weight: bold;
+
   color: rgb(20, 20, 20);
 }
 .about-container h1 span {
@@ -381,4 +400,112 @@ p.footer-rights {
   font-family: "Open Sans", "Exo 2", sans-serif;
   font-weight: 600;
   color: #333;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0.6rem 1.4rem;
+  }
+  ul.group-logo {
+    display: block;
+  }
+  li.nav-logo {
+    width: 2rem;
+    padding: 0.6rem;
+    /* height: 1rem; */
+  }
+  li.nav-name {
+    display: none;
+  }
+  ul.group-navitems {
+    margin-left: auto;
+  }
+  ul.group-navitems .navbar-item {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+  .btn-go-top {
+    height: 45px;
+    width: 45px;
+    bottom: 0.5rem;
+    right: 0.6rem;
+    background-color: #ff9fa770;
+  }
+  i.fa-angle-up {
+    fill: #f5f5f5;
+  }
+  .about-container {
+    margin: 0 1rem;
+  }
+  .about-container h1 {
+    font-size: 3rem;
+  }
+  .about-container h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .projects-container h1 {
+    padding: 2rem 0 1rem 0;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+  }
+  .projects-list {
+    width: 98%;
+  }
+  .project-item-container {
+    font-size: 1.2rem;
+  }
+  .project-item-heading {
+    font-size: 2rem;
+    padding: 0.6rem 0;
+  }
+  .project-item--img,
+  .project-item--desc {
+    padding: 0.6rem;
+  }
+  a.project-item--btn {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    min-width: 10rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .contacts-header {
+    padding: 0rem;
+  }
+  h1.contacts--heading {
+    padding: 12rem 1rem 4rem;
+    font-size: 3rem;
+    text-align: center;
+    /* white-space: nowrap; */
+  }
+  h2.contacts--desc {
+    padding: 1rem 1rem 12rem;
+    text-align: center;
+  }
+  .contacts-body {
+    margin: 0;
+    padding: 2rem;
+    width: 100%;
+  }
+  footer.footer {
+    padding: 0rem 1rem 1rem;
+    flex-direction: column;
+  }
+  a.footer-logo {
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.4rem;
+  }
+  .footer-logo img {
+    width: 3rem;
+    display: block;
+    font-size: 0;
+  }
+  .footer-logo p {
+    font-size: 2.5rem;
+  }
+  p.footer-rights {
+    padding: 0.2rem 0.4rem;
+  }
 }
