@@ -1,67 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2&family=Open+Sans&family=Roboto&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/f38137624a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="logowhite.svg" type="image/x-icon" />
+    <title>Nikesh Ramnani</title>
+  </head>
 
-<head>
-    <title>nikesh.dev | Coming Soon</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    body {
-        background-color: black;
-        color: #444;
-        font-family: 'Roboto', 'Helvetica Neue', 'Source Sans', Arial, sans-serif;
-        text-align: center;
-    }
-
-    .container {
-        height: 320px;
-        margin-top: calc(50vh - 160px);
-    }
-
-    p {
-        font-size: 2em;
-    }
-
-    h1 {
-        font-size: 4em;
-        letter-spacing: 24px;
-        font-weight: lighter;
-        color: white;
-        border: 0.8rem solid yellow;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem 1rem 1rem 1.8rem;
-    }
-
-    span {
-        padding: 20px;
-        font-size: 1.2em;
-        background: yellow;
-        color: black;
-        font-weight: 900;
-        letter-spacing: 0px;
-    }
-
-    @media screen and (max-width:640px) {
-
-        body {
-            font-size: 10px;
-        }
-
-        h1 {
-            font-size: 2.4em;
-            letter-spacing: 16px;
-        }
-
-    }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <p>Coming Soon</p>
-        <h1>NIKESH<span>.dev</span></h1>
+  <body>
+    <div class="body-container">
+      <ul class="navbar">
+        <li class="navbar-item nav-logo">
+          <a href="#"
+            ><svg
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 416 264.19"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: rgb(225, 225, 225);
+                  }
+                </style>
+              </defs>
+              <path
+                class="cls-1"
+                d="M4,4V260H36V52L244,260h32V148h32c39.5,0,72-32.5,72-72S347.5,4,308,4H108L364,260h48L188,36H308a40,40,0,0,1,0,80H244v96L36,4Z"
+              /></svg
+          ></a>
+        </li>
+        <li class="navbar-item nav-name">
+          <a href="#">Nikesh Ramnani</a>
+        </li>
+        <li class="navbar-item nav-about">
+          <a href="#about">About</a>
+        </li>
+        <li class="navbar-item nav-projects">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="navbar-item nav-contact">
+          <a href="#contacts">Contact</a>
+        </li>
+      </ul>
+      <main class="main">
+        <a href="#" class="btn-go-top"><i class="fas fa-angle-up"></i></a>
+        <section id="about" class="about-container">
+          <h1>
+            <span class="cursor-pointer">Hello stranger...</span><br />
+            I am Nikesh!
+          </h1>
+          <br />
+          <h2>
+            I am a student of Computer Engineering and currently pursuing to be
+            a full stack web developer.<br />When I am not working, you can find
+            me surfing the internet reading tech articles,<br />exercising or
+            playing counter strike.
+          </h2>
+        </section>
+        <section id="projects" class="projects-container">
+          <h1>Here are some of my projects...</h1>
+          <div class="projects-list">
+            <div class="project-item-container">
+              <h2 class="project-item-heading">Github Profile Finder</h2>
+              <div class="project-item-body">
+                <img
+                  class="project-item--img cursor-pointer"
+                  src="./src/github.svg"
+                  alt=""
+                />
+                <div class="project-item--desc">
+                  <p class="project-item--para">
+                    Created a Github Profile Finder to find a user which
+                    showcases their repositories and profile details. Made using
+                    ReactJS and github api.
+                  </p>
+                  <a
+                    href="https://githubprofilefinder-nikeshramnani.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-item--btn"
+                    >Watch live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-item-container">
+              <h2 class="project-item-heading">MCQ Quiz</h2>
+              <div class="project-item-body">
+                <img
+                  class="project-item--img cursor-pointer"
+                  src="./src/mcq.svg"
+                  alt=""
+                />
+                <div class="project-item--desc">
+                  <p class="project-item--para">
+                    Made using vanilla JavaScript and NodeJS to create an MCQ
+                    Quiz with a publicly available api.
+                  </p>
+                  <a
+                    href="https://github.com/nikesh-r/Learning-JS/tree/master/21_mcqQuiz.js"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-item--btn"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-item-container">
+              <h2 class="project-item-heading">Website Phishing Detector</h2>
+              <div class="project-item-body">
+                <img
+                  class="project-item--img cursor-pointer"
+                  src="./src/phishing.svg"
+                  alt=""
+                />
+                <div class="project-item--desc">
+                  <p class="project-item--para">
+                    Created a minimalistic web app using Python and Machine
+                    Learning to detect if a website is phishing or not.
+                  </p>
+                  <a
+                    href="https://github.com/nikesh-r/Website-Phishing-Detector-ML"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-item--btn"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contacts" class="contacts-container">
+          <div class="contacts-header">
+            <h1 class="contacts--heading">Contact Me!</h1>
+            <h2 class="contacts--desc">
+              Wanna have a chat or collabrate? Drop me a message and I will get
+              to you as soon as possible!
+            </h2>
+          </div>
+          <div class="contacts-body">
+            <a
+              href="mailto: nikesh.ramnani@gmail.com"
+              target="_blank"
+              class="contacts--item c-item--email"
+            >
+              <i class="fas fa-envelope"></i>
+              <span>nikesh.ramnani@gmail.com</span>
+            </a>
+            <a
+              href="https://github.com/nikesh-r"
+              target="_blank"
+              class="contacts--item c-item--github"
+            >
+              <i class="fab fa-github-alt"></i>
+              <span>nikesh-r</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nikeshramnani/"
+              target="_blank"
+              class="contacts--item c-item--linkedin"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span>nikeshramnani</span>
+            </a>
+            <a
+              href="https://twitter.com/nikeshramnani"
+              target="_blank"
+              class="contacts--item c-item--twitter"
+            >
+              <i class="fab fa-twitter"></i>
+              <span>@nikeshramnani</span>
+            </a>
+          </div>
+        </section>
+        <footer class="footer">
+          <a href="#" class="footer-logo">
+            <img src="logodarkgrey.svg" alt="logo" />
+            <p>Nikesh Ramnani</p>
+          </a>
+          <p class="footer-rights">All rights reserved &copy; 2021</p>
+        </footer>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>
