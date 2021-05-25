@@ -77,7 +77,30 @@ a {
 }
 .navbar-item {
   list-style-type: none;
-  font: 1.2rem "Roboto";
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+}
+.nav-name::after,
+.nav-projects::after,
+.nav-contact::after {
+  content: "";
+  display: block;
+  background-color: var(--colorSecondary);
+  width: inherit;
+  height: 2px;
+  margin-top: 0.2rem;
+  border-radius: 10px;
+  transform: translateX(-110%);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-name:hover::after,
+.nav-projects:hover::after,
+.nav-contact:hover::after {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .navbar-item a:link,
@@ -103,7 +126,9 @@ li.navbar-item.nav-logo a {
 }
 
 li.navbar-item.nav-name {
-  font: 600 2rem "montserrat";
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
   margin-left: 2rem;
 }
 
@@ -145,7 +170,7 @@ li.navbar-item.nav-contact {
   align-items: flex-start;
   justify-content: center;
   margin-left: 10rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
   /* position: relative; */
 }
 
@@ -173,27 +198,28 @@ section.projects-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .projects-container h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Exo 2", sans-serif;
   font-weight: 600;
-  margin: 0 auto 2.5rem auto;
-  font-size: 2.5rem;
+  margin: 1.5rem auto 2.5rem auto;
+  color: #333;
+  font-size: 2rem;
 }
 
 .projects-list {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: grid;
-  row-gap: 3rem;
+  row-gap: 4rem;
 }
 
 .project-item-heading {
-  font-family: "Roboto";
-  font-size: 2.2rem;
-  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
   padding: 1rem 0;
 }
 
@@ -203,7 +229,9 @@ section.projects-container {
   justify-items: center;
 }
 
-.project-item--img,
+.project-item--img {
+  padding: 2rem;
+}
 .project-item--desc {
   padding: 2rem;
 }
@@ -213,7 +241,7 @@ section.projects-container {
   color: #333;
   border-radius: 1rem;
   border: solid 2px white;
-  transition: background-color 0.3s ease-in;
+  transition: background-color 0.2s ease;
 }
 
 .project-item-container-a:hover,
@@ -224,7 +252,7 @@ section.projects-container {
 }
 
 .project-item-container {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   font-family: "Lato";
 }
@@ -244,14 +272,14 @@ section.projects-container {
 .project-item-container-a:nth-child(odd)
   .project-item-container
   .project-item--img {
-  justify-self: end;
+  /* justify-self: end; */
 }
 
 .project-item-container-a:nth-child(even)
   .project-item-container
   .project-item--img {
   grid-column: 2;
-  justify-self: start;
+  /* justify-self: start; */
 }
 
 .project-item-container-a:nth-child(odd)
@@ -325,9 +353,9 @@ section.projects-container {
 }
 
 h1.contacts--heading {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
-  color: #fff;
+  color: white;
   font-weight: 600;
   padding-bottom: 3rem;
   text-align: center;
@@ -353,7 +381,7 @@ a.contacts--item {
   display: flex;
   align-items: center;
   margin-bottom: 0.2rem;
-  color: #ffffff;
+  color: white;
   padding: 0.4rem;
 }
 
@@ -383,7 +411,7 @@ a.contacts--item:hover {
 }
 
 .contacts--item span {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
 }
 
