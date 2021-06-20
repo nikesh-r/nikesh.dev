@@ -21,12 +21,12 @@ font-family: 'Montserrat', sans-serif;
   padding: 0;
   font-size: 100%;
   font: inherit;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 img {
@@ -36,7 +36,6 @@ img {
 
 a {
   text-decoration: none;
-  /* color: black; */
 }
 
 .cursor-pointer {
@@ -91,7 +90,7 @@ a {
   margin-top: 0.2rem;
   border-radius: 10px;
   transform: translateX(-110%);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.4, 1.1);
   opacity: 0;
   pointer-events: none;
 }
@@ -113,10 +112,10 @@ a {
   color: var(--colorSecondary);
 }
 
-li.navbar-item.nav-logo {
+.navbar-item.nav-logo {
   width: 4rem;
 }
-li.navbar-item.nav-logo a {
+.navbar-item.nav-logo a {
   display: block;
   font-size: 0;
 }
@@ -125,25 +124,23 @@ li.navbar-item.nav-logo a {
   fill: var(--colorSecondary);
 }
 
-li.navbar-item.nav-name {
+.navbar-item.nav-name {
   font-weight: 600;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   margin-left: 2rem;
 }
 
-li.navbar-item.nav-projects {
+.navbar-item.nav-projects {
   margin-left: 5rem;
 }
 
-li.navbar-item.nav-contact {
+.navbar-item.nav-contact {
   margin-left: 5rem;
 }
 
 .main {
   height: 100%;
-  /* display: block; */
-  /* position: relative; */
 }
 
 .btn-go-top {
@@ -194,7 +191,7 @@ li.navbar-item.nav-contact {
   /* padding: 20px 0; */
 }
 
-section.projects-container {
+.projects-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -352,7 +349,7 @@ section.projects-container {
   padding: 7rem;
 }
 
-h1.contacts--heading {
+.contacts--heading {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   color: white;
@@ -361,8 +358,8 @@ h1.contacts--heading {
   text-align: center;
 }
 
-h2.contacts--desc {
-  font-family: system-ui;
+.contacts--desc {
+  font-family: "Exo 2", sans-serif;
   font-size: 1.5rem;
   color: #f5f5f5;
   font-weight: 500;
@@ -377,7 +374,7 @@ h2.contacts--desc {
   width: fit-content;
 }
 
-a.contacts--item {
+.contacts--item {
   display: flex;
   align-items: center;
   margin-bottom: 0.2rem;
@@ -385,7 +382,7 @@ a.contacts--item {
   padding: 0.4rem;
 }
 
-a.contacts--item:hover {
+.contacts--item:hover {
   background-color: var(--colorSecondary30);
   border-radius: 0.5rem;
 }
@@ -415,24 +412,24 @@ a.contacts--item:hover {
   font-size: 1.2rem;
 }
 
-footer.footer {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3.6rem 2rem 1.8rem 2rem;
 }
 
-a.footer-logo {
+.footer-logo {
   display: flex;
   align-items: center;
 }
 
-a.footer-logo:link,
-a.footer-logo:visited {
+.footer-logo:link,
+.footer-logo:visited {
   color: #333;
 }
-a.footer-logo:hover,
-a.footer-logo:active {
+.footer-logo:hover,
+.footer-logo:active {
   color: #333;
 }
 
@@ -447,7 +444,7 @@ a.footer-logo:active {
   font-weight: 600;
 }
 
-p.footer-rights {
+.footer-rights {
   font-family: "Open Sans", "Exo 2", sans-serif;
   font-weight: 600;
   color: #333;
@@ -457,21 +454,21 @@ p.footer-rights {
   .navbar {
     padding: 0.6rem 1.4rem;
   }
-  ul.group-logo {
+  .group-logo {
     display: block;
   }
-  li.nav-logo {
+  .nav-logo {
     width: 2rem;
     padding: 0.6rem;
     /* height: 1rem; */
   }
-  li.nav-name {
+  .nav-name {
     display: none;
   }
-  ul.group-navitems {
+  .group-navitems {
     margin-left: auto;
   }
-  ul.group-navitems .navbar-item {
+  .group-navitems .navbar-item {
     margin-left: 1.8rem;
     font-size: 1rem;
   }
@@ -532,13 +529,13 @@ p.footer-rights {
   .contacts-header {
     padding: 0rem;
   }
-  h1.contacts--heading {
+  .contacts--heading {
     padding: 8rem 1rem 2rem;
     font-size: 2.4rem;
     text-align: center;
     /* white-space: nowrap; */
   }
-  h2.contacts--desc {
+  .contacts--desc {
     padding: 1rem 1rem 4rem;
     font-size: 1.2rem;
     text-align: center;
@@ -548,13 +545,13 @@ p.footer-rights {
     padding: 2rem 2rem 4rem;
     width: 100%;
   }
-  footer.footer {
+  .footer {
     padding: 0rem 1rem 1rem;
     flex-direction: column;
     /* align-items: center;
     justify-content: center; */
   }
-  a.footer-logo {
+  .footer-logo {
     align-items: center;
     justify-content: center;
     padding: 1rem 0.4rem 0.4rem;
@@ -567,7 +564,7 @@ p.footer-rights {
   .footer-logo p {
     font-size: 2.2rem;
   }
-  p.footer-rights {
+  .footer-rights {
     padding: 0.6rem 0.4rem;
   }
 }
