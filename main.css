@@ -1,12 +1,3 @@
-/**
-
-font-family: 'Exo 2', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif;
-
-
-**/
 :root {
   --colorPrimary: #5233ff;
   --colorSecondary: #aebaff;
@@ -67,14 +58,16 @@ a {
 .group-logo {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .group-navitems {
   display: flex;
   align-items: center;
   margin-left: auto;
+  position: relative;
 }
-.navbar-item {
+.nav-items {
   list-style-type: none;
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
@@ -82,15 +75,16 @@ a {
 .nav-name::after,
 .nav-projects::after,
 .nav-contact::after {
+  position: relative;
+  top: 0.2rem;
+  left: 50%;
   content: "";
   display: block;
   background-color: var(--colorSecondary);
-  width: inherit;
+  width: 0px;
   height: 2px;
-  margin-top: 0.2rem;
   border-radius: 10px;
-  transform: translateX(-110%);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.4, 1.1);
+  transition: 0.5s;
   opacity: 0;
   pointer-events: none;
 }
@@ -98,24 +92,25 @@ a {
 .nav-name:hover::after,
 .nav-projects:hover::after,
 .nav-contact:hover::after {
-  transform: translateX(0%);
+  width: 100%;
   opacity: 1;
+  left: 0%;
 }
 
-.navbar-item a:link,
-.navbar-item a:visited {
+.nav-items a:link,
+.nav-items a:visited {
   color: rgb(225, 225, 225);
 }
 
-.navbar-item a:hover,
-.navbar-item a:active {
+.nav-items a:hover,
+.nav-items a:active {
   color: var(--colorSecondary);
 }
 
-.navbar-item.nav-logo {
+.nav-items.nav-logo {
   width: 4rem;
 }
-.navbar-item.nav-logo a {
+.nav-items.nav-logo a {
   display: block;
   font-size: 0;
 }
@@ -124,18 +119,18 @@ a {
   fill: var(--colorSecondary);
 }
 
-.navbar-item.nav-name {
+.nav-items.nav-name {
   font-weight: 600;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   margin-left: 2rem;
 }
 
-.navbar-item.nav-projects {
+.nav-items.nav-projects {
   margin-left: 5rem;
 }
 
-.navbar-item.nav-contact {
+.nav-items.nav-contact {
   margin-left: 5rem;
 }
 
@@ -310,11 +305,6 @@ a {
   transition: 0.3s;
 }
 
-/* .project-item--btn:link,
-.project-item--btn:visited {
-  color: white;
-} */
-
 .project-item--btn:hover,
 .project-item--btn:active {
   background-color: white;
@@ -468,7 +458,7 @@ a {
   .group-navitems {
     margin-left: auto;
   }
-  .group-navitems .navbar-item {
+  .group-navitems .nav-items {
     margin-left: 1.8rem;
     font-size: 1rem;
   }
